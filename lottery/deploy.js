@@ -2,7 +2,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
 const { abi, evm } = require('./compile');
 
-const mnemonic =  'ginger acquire message taste scheme near mule genre cross asset inquiry all';
+const mnemonic = 'ginger acquire message taste scheme near mule genre cross asset inquiry all' 
 const endPointUrl = 'https://goerli.infura.io/v3/87c4314ef4e448d791c9458899877a18';
 
 const provider = new HDWalletProvider(mnemonic,endPointUrl);
@@ -15,8 +15,9 @@ const deploy = async () => {
 
   const result = await new web3.eth.Contract(abi)
     .deploy({ data: evm.bytecode.object })
-    .send({ gas: '1000000', from: accounts[0] });
+    .send({ gas: '100000', from: accounts[0] });
 
+  console.log(abi);
   console.log('Contract deployed to', result.options.address);
   provider.engine.stop();
 };
