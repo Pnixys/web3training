@@ -4,15 +4,20 @@
   "description": "campaign smart contract",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "next dev"
   },
   "author": "Pnixys",
   "license": "ISC",
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.1.7",
+    "dotenv": "^16.0.3",
     "fs-extra": "^11.1.0",
     "ganache-cli": "^6.12.2",
     "mocha": "^10.2.0",
+    "next": "^12.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "solc": "^0.8.19",
     "web3": "^1.8.2"
   }

@@ -1,9 +1,10 @@
+require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFactory.json');
 
-const mnemonic = 'ginger acquire message taste scheme near mule genre cross asset inquiry all' 
-const endPointUrl = 'https://goerli.infura.io/v3/87c4314ef4e448d791c9458899877a18';
+const mnemonic =  process.env.MNEMONIC;
+const endPointUrl = process.env.ENDPOINT_URL;
 
 const provider = new HDWalletProvider(mnemonic,endPointUrl);
 const web3 = new Web3(provider);
