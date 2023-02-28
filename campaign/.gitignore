@@ -2,3 +2,4 @@
 /ethereum/build
 /ethereum/.env
 /.next
+/ethereum/next.config.js

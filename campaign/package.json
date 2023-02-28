@@ -16,9 +16,15 @@
     "ganache-cli": "^6.12.2",
     "mocha": "^10.2.0",
     "next": "^12.3.4",
+    "next-runtime-dotenv": "^1.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "solc": "^0.8.19",
     "web3": "^1.8.2"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
