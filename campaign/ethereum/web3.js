@@ -3,7 +3,7 @@ import Web3 from "web3";
 import getConfig from 'next/config'
 
 const {
-  serverRuntimeConfig: {ENDPOINT_URL} // Only available server side
+  serverRuntimeConfig: {MNEMONIC, ENDPOINT_URL} // Only available server side
 } = getConfig()
 
 let web3;
