@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import factory from '../ethereum/factory';
 import { Button, Card } from 'semantic-ui-react';
+import Layout from '../components/layout';
 
 const index = () => {
   const [campaigns, setCampaigns] = useState([]);
@@ -25,17 +26,17 @@ const index = () => {
   };
 
   return (
-    <div>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
-      />
-      {renderCampaigns()}
-      <Button 
-        content="Create campaign"
-        icon="add circle"
-        primary/>
-    </div>
+    <Layout>
+      <div style={{margin: '5px'}}>
+        <h2>Open campaigns</h2>
+        <Button 
+          content="Create campaign"
+          icon="add circle"
+          floated='right'
+          primary/>
+          {renderCampaigns()}
+      </div>
+    </Layout>
   )
 }
 
