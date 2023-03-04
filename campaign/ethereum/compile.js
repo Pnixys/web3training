@@ -23,11 +23,15 @@ const input = {
     },
 };
 
-const output = JSON.parse(solc.compile(JSON.stringify(input))).contracts['Campaign.sol'];
+try {
+  const output = JSON.parse(solc.compile(JSON.stringify(input))).contracts['Campaign.sol'];
+  for (let contract in output) {
+    fs,fs.outputJsonSync(
+      path.resolve(buildPath, contract+'.json'),
+      output[contract]
+    )
+  };
+} catch(error) {
+  console.error(error);
+}
 
-for (let contract in output) {
-  fs,fs.outputJsonSync(
-    path.resolve(buildPath, contract+'.json'),
-    output[contract]
-  )
-};
